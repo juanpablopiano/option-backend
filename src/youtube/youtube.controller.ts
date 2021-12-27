@@ -8,6 +8,6 @@ export class YoutubeController {
 
   @Get(':keyword')
   findOne(@Param('keyword') keyword: string): YoutubeSnippet {
-    return `Searching for ${keyword}`;
+    return this.youtubeService.findVideo(keyword);
   }
 }
